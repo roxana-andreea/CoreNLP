@@ -1,0 +1,27 @@
+US Presidential Elections 2016 - twitter analyses using Standford CoreNLP
+
+Database:
+- NoSQL database, MongoDB
+- pymongo, python driver for communication with MongoDB server
+- data format BSON (binary json)
+- easier to aggregate data
+- populated with 127175 tweets
+
+Live Demo:
+  Starting MongoDB server:
+  - /home/uselections/mongodb/bin/mongod --dbpath data/
+  - data/ folder contains the data files
+  - mongod server process runs by default on 27017 port
+  Starting MongoDB shell:
+  - /home/uselections/mongodb/bin/mongo
+  Help in mongo shell:
+  - help
+  - db.help()
+  Querying:
+  - db.tweets.findOne():
+  - returns first tweet
+  - db.tweets.find():
+  - returns first 20 documents from “tweets” collection
+  - type it for another 20
+  - db.tweets.find().count():
+  - returns the number of entries in “tweets” collection
